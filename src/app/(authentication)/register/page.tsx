@@ -1,18 +1,51 @@
 "use client"
 
 import Link from "next/link"
+import { useState } from "react"
 import Button from "~/components/Button"
 import Input from "~/components/Input"
 
 export default function Page() {
-    return (
-        <div className="flex flex-col justify-center gap-4 w-96">
-            <Input placeholder="Name" type="text" />
-            <Input placeholder="Email" type="email" />
-            <Input placeholder="Password" type="password" />
-            <Input placeholder="Confirm password" type="password" />
+    const [error, setError] = useState("")
+    const [userInfo, setUserInfo] = useState({
+        name: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+    })
 
-            <Button onClick={() => {}}>Create Account</Button>
+    const handleSignUp = () => {
+        setError("")
+    }
+
+    return (
+        <form className="flex flex-col justify-center gap-4 w-96">
+            <h4 className="text-red-500 empty:before:inline-block text-center">{error}</h4>
+
+            <Input
+                placeholder="Name"
+                type="text"
+                onChange={({ target }) => setUserInfo({ ...userInfo, name: target.value })}
+            />
+            <Input
+                placeholder="Email"
+                type="email"
+                onChange={({ target }) => setUserInfo({ ...userInfo, email: target.value })}
+            />
+            <Input
+                placeholder="Password"
+                type="password"
+                onChange={({ target }) => setUserInfo({ ...userInfo, password: target.value })}
+            />
+            <Input
+                placeholder="Confirm password"
+                type="password"
+                onChange={({ target }) =>
+                    setUserInfo({ ...userInfo, confirmPassword: target.value })
+                }
+            />
+
+            <Button onClick={handleSignUp}>Create Account</Button>
 
             <h4 className="text-center">
                 Already have an account?{" "}
@@ -20,6 +53,6 @@ export default function Page() {
                     Login
                 </Link>
             </h4>
-        </div>
+        </form>
     )
 }
