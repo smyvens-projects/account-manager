@@ -47,17 +47,14 @@ export default function Page() {
                 }}
             />
 
-            <Link href="/account/login">
-                <h4 className="text-primary">Forgot password?</h4>
+            <Link href="/account/login" className="w-fit">
+                Forgot password?
             </Link>
 
             <Button onClick={handleSignIn}>Login</Button>
 
             <h4 className="text-center">
-                Don&apos; have an account?{" "}
-                <Link href="/account/register" className="text-primary">
-                    Register
-                </Link>
+                Don&apos; have an account? <Link href="/account/register">Register</Link>
             </h4>
         </div>
     )

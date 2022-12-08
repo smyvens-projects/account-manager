@@ -13,7 +13,7 @@ export default function Input({ placeholder, type, onChange }: InputProps) {
                 placeholder={placeholder}
                 type={type}
                 onChange={onChange}
-                className="w-full outline outline-1 outline-gray-300 rounded-md py-3 px-6"
+                className="w-full outline outline-1 outline-gray-300 border-none rounded-md py-3 px-6 text-gray-500 focus:bg-slate-200"
             />
         </div>
     )

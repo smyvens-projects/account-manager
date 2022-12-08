@@ -26,7 +26,7 @@ export default function Authentication({ children, session }: AuthenticationProp
             <div className="flex items-center justify-center w-full h-screen">
                 <div className="bg-gray-100 rounded-xl w-fit p-10">
                     <div className="flex flex-col items-center justify-center w-96 gap-5">
-                        <h1 className="capitalize text-5xl font-bold text-slate-800 ">
+                        <h1 className="capitalize text-5xl font-bold text-slate-800 empty:before:inline-block">
                             {rendered && pathname?.split("/")[2]}
                         </h1>
 
