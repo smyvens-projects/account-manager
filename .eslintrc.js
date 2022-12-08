@@ -33,6 +33,7 @@ module.exports = {
                 namedComponents: "function-declaration",
             },
         ],
+        "react/require-default-props": "off",
     },
     settings: {
         react: {

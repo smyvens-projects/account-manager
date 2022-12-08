@@ -24,6 +24,13 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "public/**/*"
+  ],
   "exclude": ["node_modules", "cypress"]
 }

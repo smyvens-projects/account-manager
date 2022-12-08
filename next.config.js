@@ -1,10 +1,17 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    experimental: {
-        appDir: true,
-    },
-}
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
-module.exports = nextConfig
+/**
+ * @type {import('next').NextConfig}
+ */
+module.exports = (phase, { defaultConfig }) => {
+    const config = {
+        reactStrictMode: true,
+        swcMinify: true,
+        experimental: {
+            appDir: true,
+        },
+        basePath: "/account",
+    }
+
+    return config
+}
