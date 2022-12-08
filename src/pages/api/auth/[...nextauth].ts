@@ -53,7 +53,7 @@ export default NextAuth({
         },
     },
     pages: {
-        signIn: "/account/authentication/login",
+        signIn: "/account/login",
         newUser: "/account/register",
     },
     // adapter: PrismaAdapter(prismaClient),
