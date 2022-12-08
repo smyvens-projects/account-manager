@@ -26,7 +26,7 @@ export default function Authentication({ children, session }: AuthenticationProp
             <div className="flex items-center justify-center w-full h-screen">
                 <div className="bg-gray-100 rounded-xl w-fit p-10">
                     <div className="flex flex-col items-center justify-center w-96 gap-5">
-                        <h1 className="capitalize text-5xl font-bold mb-5">
+                        <h1 className="capitalize text-5xl font-bold text-slate-800 ">
                             {rendered && pathname?.split("/")[2]}
                         </h1>
 
@@ -38,8 +38,8 @@ export default function Authentication({ children, session }: AuthenticationProp
                             <HorizontalLine />
                         </div>
 
-                        <Button onClick={() => signIn("google")} outline fullWidth textAlign="left">
-                            <span className="flex items-center justify-start gap-3">
+                        <Button onClick={() => signIn("google")} outline fullWidth>
+                            <span className="flex items-center justify-center gap-3">
                                 <Image src={googleLogo} alt="" priority className="w-5" />
                                 <h3>Continue with Google</h3>
                             </span>
