@@ -15,7 +15,7 @@ export default function Button({ children, onClick, outline, fullWidth }: Button
             className={`${
                 outline
                     ? "outline outline-slate-300 outline-1 bg-white hover:bg-slate-200"
-                    : "bg-primary text-white hover:bg-opacity-75"
+                    : "bg-primary text-white hover:bg-slate-500"
             } ${
                 fullWidth && "w-full"
             } px-6 py-3 rounded-md border-none [transition:_background-color_.3s_ease-in-out] active:translate-y-1`}
