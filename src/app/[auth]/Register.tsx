@@ -2,7 +2,7 @@ import Link from "next/link"
 import { useState } from "react"
 import Button from "~/components/Button"
 import Input from "~/components/Input"
-import { RiContactsFill } from "react-icons/ri"
+import { RiContactsLine } from "react-icons/ri"
 import { MdOutlineAlternateEmail } from "react-icons/md"
 import { FiEye, FiEyeOff } from "react-icons/fi"
 
@@ -27,7 +27,7 @@ export default function Register() {
                 type="text"
                 placeholder="Full name"
                 onChange={({ target }) => setUserInfo({ ...userInfo, email: target.value })}
-                icon={{ name: RiContactsFill }}
+                icon={{ name: RiContactsLine }}
             />
             <Input
                 type="email"
