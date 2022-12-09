@@ -5,11 +5,14 @@ import router from "next/router"
 import { useState } from "react"
 import Button from "~/components/Button"
 import Input from "~/components/Input"
+import { FiEye, FiEyeOff } from "react-icons/fi"
+import { MdOutlineAlternateEmail } from "react-icons/md"
 
 export default function Login() {
     const searchParams = useSearchParams()
     const [error, setError] = useState("")
     const [userInfo, setUserInfo] = useState({ email: "", password: "" })
+    const [showPassword, setShowPassword] = useState(false)
 
     const handleLogin = async () => {
         setError("")
@@ -33,11 +36,16 @@ export default function Login() {
                 type="email"
                 placeholder="email@example.com"
                 onChange={({ target }) => setUserInfo({ ...userInfo, email: target.value })}
+                icon={{ name: MdOutlineAlternateEmail }}
             />
             <Input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="*********"
                 onChange={({ target }) => setUserInfo({ ...userInfo, email: target.value })}
+                icon={{
+                    name: showPassword ? FiEyeOff : FiEye,
+                    onClick: () => setShowPassword(!showPassword),
+                }}
             />
             <Button onClick={handleLogin} fullWidth>
                 Sign In
